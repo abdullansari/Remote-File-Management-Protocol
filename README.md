@@ -3,6 +3,5 @@ A remote file management system is crucial for client-server communications. Why
 
 The Remote File Management Protocol (RFMP) provides the same services but in a more simplified manner.
 
-![image](https://github.com/user-attachments/assets/4cb5212a-0b0f-4b07-949f-31a64996e063)
-
+![filetransfer](https://github.com/user-attachments/assets/b1c5b520-e6e4-43b4-b606-85c9ec80cdc2)
 
