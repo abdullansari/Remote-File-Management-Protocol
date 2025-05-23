@@ -313,14 +313,14 @@ def main():
         while True:
             try:
                 client, addr = server.accept()
-                clientThread = threading.Thread(target=handleClient, args=(client, addr))
+                clientThread = threading.Thread(target=handleClient, args=(client, addr)) # Accept multiple clients.
                 clientThread.start()
             except Exception as e:
                 print(f"Error accepting connection: {e}")
     except Exception as ex:
         print(f"Server error: {ex}")
     finally:
-        server.close()
+        server.close() # Make sure to close the server socket when done.
 
 if __name__ == "__main__":
     main()
