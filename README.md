@@ -53,9 +53,9 @@ Now that the foundation of the communication has been established as well as the
 12. `ls` - show all files/ folders
 13. `Exit`
 
-To prevent semantic errors and a better user experience, the client simply has to enter the number of the service it wishes for. For example, if the client wants to create a directory using the `mkdir` command, it simply needs to enter _1_ into the terminal and the RFMP will understand.
+To prevent errors and to provide a better user experience, the client simply has to enter the number of the service it wishes for. For example, if the client wants to create a directory using the `mkdir` command, it simply needs to enter _1_ into the terminal and the RFMP will understand.
 
-In cases for commands that require text input such as the `openWrite` command, the client(s) can simply type the content it wishes to write into a file, which it will define, and then the RFMP will encrypt it (if secured communication is chosen) using the algorithms the client(s) had previously picked. This operation would be sent via a **Data Packet** and would have the structure of `(DP,<content>)`.
+In cases for commands that require text input such as the `openWrite` command, the client(s) can simply type the content it wishes to write into a file, which it will define, and then the RFMP will encrypt it (if secured communication is chosen) using the algorithms the client(s) had previously picked. This operation would be sent via a **Data Packet** which has the structure `(DP,<content>)`.
 
 Furthermore, after each successful transmission of a packet, the server returns a **Successful packet** with the structure `(SC)` otherwise an **Error packet** with the structure `(EC)`. The RFMP is a robust protocol and if an error is encountered mid-operation, it will efficiently handle it due its extensive error handling and reporting capabilities. Additionally, if an error occurs, the RFMP informs the client exactly about what type of error was encountered.
 
