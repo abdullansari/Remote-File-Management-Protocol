@@ -193,7 +193,6 @@ def main():
             clientKeys = RSA.generate(2048)
             clientPublicKey = clientKeys.publickey().export_key()
             
-            # Encrypt session key with server's public key
             cipher = PKCS1_OAEP.new(RSA.import_key(serverPublicKey.encode())) # Encode ServerPubKey because it was decoded when transferring with the CC packet.
             
             # Choose encryption method
@@ -203,7 +202,7 @@ def main():
                     break
                 print("Invalid input.")
             
-            # Prepare session key
+            # Prepare session key   
             if encryptionAlgorithm == "A":
                 sessionKey = get_random_bytes(16)
                 encryptedSessionKey = cipher.encrypt(sessionKey)
