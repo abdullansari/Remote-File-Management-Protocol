@@ -7,7 +7,7 @@ The Remote File Management Protocol (RFMP) provides the same services but in a m
 ![filetransfer](https://github.com/user-attachments/assets/b1c5b520-e6e4-43b4-b606-85c9ec80cdc2)
 _Source: Pinterest._
 
-## 🧱 Setup Phase
+##  Setup Phase
 
 The setup phase is just about laying down the foundations for the client-server communication. Once the client connects to the server, the application sends the following packets in this order:
 1) **Start packet (client to server):** sends the starting packet containing information about the packet type, protocol name, protocol version, secured-communication respectively and is depicted as `(SS,RFMP,v1.0,1)`. The packet type (SS) is _start_, _RFMP_ is the protocol name, _v1.0_ is the protocol version, and the _1_ means that the client wants secured communication. If the client wishes for secured communication, the application sends an _encryption-packet_ (EC) immediately after the SS packet. However, if the client does not wish for secure communication then a _0_ will be placed in place of the _1_ and no additional packet will be sent immediately after the SS packet.
