@@ -19,9 +19,11 @@ _Before we proceed further, let's clarify a few things about how the keys specif
 ### Key Generation & Encryption Specification
 
 The RFMP secured communication consists of 4 keys and 2 ciphers.
+
 **KEYS**
 - Server public/private keys.
 - Client public/private keys.
+
 **CIPHERS**
 - AES cipher.
 - Caesar cipher.
